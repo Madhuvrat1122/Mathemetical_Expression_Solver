@@ -1,0 +1,5 @@
+for run handwritten expression solver:-
+go to sprintbackog4 and run server.py file
+
+for run expression in image and input image:-
+go to sprintbackog1_2_3 and run server.py file
