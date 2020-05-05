@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Handwritten Expression Solver</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="static/util.css">
+	<link rel="stylesheet" type="text/css" href="static/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<span class="contact100-form-symbol">
+				<img src="../static/images/img.png" alt="SYMBOL-MAIL">
+			</span>
+
+			<form class="contact100-form validate-form flex-sb flex-w" action="{{ url_for('output') }}" method="POST">
+				<span class="contact100-form-title">
+					Handwritten Expression Solver
+				</span>
+
+				<div class="wrap-input100 rs1 validate-input" data-validate = "Name is required">
+					<input class="input100" type="file" name="fileupload" placeholder="Name" style="padding-top: 13px;">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 rs1 validate-input">
+					<input class="input100" type="text" value="{{ status }}" placeholder="your expression is..." disabled>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<textarea class="input100" name="message" placeholder="Result of Expression" placeholder="Solution" disabled>
+						Result :- {{ status1 }}
+					</textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						Solve
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
